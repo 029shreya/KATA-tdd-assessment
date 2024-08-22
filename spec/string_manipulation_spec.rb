@@ -16,4 +16,8 @@ describe StringManipulation do
     expect(StringManipulation.add("1,2,3")).to eq(6)
   end
 
+  it 'returns the sum of numbers separated by commas or newlines' do
+    expect(StringManipulation.add("1\n2,3")).to eq(6)
+  end
+
 end
