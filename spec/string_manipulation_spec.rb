@@ -12,4 +12,8 @@ describe StringManipulation do
     expect(StringManipulation.add("1,2")).to eq(3)
   end
 
+  it 'returns the sum of multiple numbers' do
+    expect(StringManipulation.add("1,2,3")).to eq(6)
+  end
+
 end
