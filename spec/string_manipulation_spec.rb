@@ -24,4 +24,8 @@ describe StringManipulation do
     expect(StringManipulation.add("//;\n1;2")).to eq(3)
   end
 
+  it 'raises an exception when a negative number is passed' do
+    expect { StringCalculator.add("1,-2,3") }.to raise_error("Negative numbers not allowed: -2")
+  end
+
 end
