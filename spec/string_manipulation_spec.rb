@@ -20,4 +20,8 @@ describe StringManipulation do
     expect(StringManipulation.add("1\n2,3")).to eq(6)
   end
 
+  it 'supports different delimiters specified at the start of the string' do
+    expect(StringManipulation.add("//;\n1;2")).to eq(3)
+  end
+
 end

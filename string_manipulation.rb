@@ -1,8 +1,14 @@
 class StringManipulation
   
   def self.add(numbers)
-    return 0 if numbers.empty?
-    numbers.split(/,|\n/).map(&:to_i).sum
+    if numbers.start_with?("//")
+      delimiter, numbers = numbers.split("\n", 2)
+      delimiter = delimiter[2..-1]
+    else
+      delimiter = /,|\n/
+    end
+    numbers.split(delimiter).map(&:to_i).sum
   end
+
 
 end
